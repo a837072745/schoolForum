@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja"xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/dist/semantic.min.css}">
+    <link rel="stylesheet" media="screen" th:href="@{/css/common.css}">
+    <link rel="stylesheet" media="screen" th:href="@{/css/login.css}">
+    <link rel="icon" type="image/x-icon" th:href="@{/img/logo.ico}">
+    <script type="text/javascript" th:src="@{/common/jquery-3.1.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/css/dist/semantic.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/login.js}"></script>
+    <title>喵喵学校论坛</title>
+  </head>
+  <body>
+
+    <form class="ui form" id="login_form" th:action="@{/userInfo/queryUser}" th:object="${userVo}" method="post">
+
+      <div class="ui raised segment ui-box corner labeled">
+        <div class="ui corner label">
+          <i class="envelope icon"></i>
+        </div>
+
+        <!-- <div class="ui secondary pointing menu">
+          <ul>
+            <li class="active item">QRコード</li>
+          </ul>
+        </div> -->
+
+        <div class="ui secondary pointing menu">
+          <a class="item ui-title">短信验证</a>
+          <a class="active item ui-title">ユーザパス</a>
+        </div>
+
+        <div class="ui hidden divider"></div>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <input id="userName" name="userName" th:field="*{userName}" type="text" placeholder="ユーザー名">
+            <i class="user icon"></i>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="ui left icon input">
+            <input id="password" name="password" th:field="*{password}" type="password" placeholder="パスワード">
+            <i class="lock icon"></i>
+          </div>
+        </div>
+        <p class="ui-p">
+          <div class="ui checkbox">
+            <input type="checkbox" checked="checked">
+            <label title="建议在网吧或公共电脑上取消该选项。">记住我</label>
+          </div>
+          <a href="#"class="ui-word-right">忘记密码</a>
+        </p>
+
+        <a class="fluid ui button ui-button" onclick="login_form()">登陆</a>
+
+        <p class="ui-p">まだ登録していない方は
+          <a href="#"><span>こちら</span></a>
+        </p>
+
+      </div>
+
+
+    </form>
+
+  </body>
+</html>

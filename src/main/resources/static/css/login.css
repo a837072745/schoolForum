@@ -1,0 +1,25 @@
+body {
+  /* background-image:url('../img/word-logo.png'); */
+  background-image:url('../img/medium-logo.png');
+  background-repeat:no-repeat;
+  background-position:150px 130px;
+}
+.segment.ui-box{
+  width:300px;
+  height:320px;
+}
+.ui.segment:last-child{
+  margin:100px 0px 0px 800px;
+}
+.ui-title{
+  width:135px;
+}
+.ui-p{
+  margin: 10px 0px 10px 0px;
+}
+.ui.button.ui-button{
+  background-color:#769fcd;
+}
+.ui-word-right{
+  float:right;
+}

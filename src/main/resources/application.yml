@@ -1,0 +1,23 @@
+
+#mybatis配置
+mybatis:
+  typeAliasesPackage: com.schoolForum.schoolForum.user.vo
+  mapperLocations: classpath:entity/*.xml
+  config-location: classpath:mybatis-config.xml
+
+
+spring:
+#数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?serverTimezone=GMT
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+#MVC配置
+#  mvc:
+#    view:
+#      prefix: classpath:/templates/html/
+#      suffix: .html
+  thymeleaf:
+    prefix: classpath:/templates/
